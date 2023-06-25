@@ -20,9 +20,17 @@
       }
     ],
     "paths": {
-      "@service/*": ["./src/*"]
+      "@service/*": ["./src/service/*"],
+      "@components/*": ["./src/components/*"],
+      "@contexts/*": ["./src/contexts/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "jest.config.mjs"
+  ],
   "exclude": ["node_modules"]
 }
