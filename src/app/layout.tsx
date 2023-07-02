@@ -1,12 +1,12 @@
 import { Metadata } from "next";
-import "./styles/globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import "./styles/globals.css";
-
+import { AppContextProvider } from "@contexts/AppContext";
 const font = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
 });
+
+import "../styles/global.css"
 
 export const metadata: Metadata = {
   title: "Leadster - Home",
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={font.className}>
-        {children}
+        <AppContextProvider>{children}</AppContextProvider>
       </body>
     </html>
   );
